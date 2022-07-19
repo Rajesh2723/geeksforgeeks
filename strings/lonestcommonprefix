@@ -1,0 +1,25 @@
+ string longestCommonPrefix (string arr[], int N)
+   {
+       string str = arr[0];
+       for(int i = 1;i<N;i++)
+       {
+           string s1 = arr[i];
+           int s = 0;
+           for(int j =0;j<s1.length();j++)
+           {
+               if(str[j] == s1[j])
+               {
+                  s++;
+               }
+           }
+           str = str.substr(0,s);
+       }
+       if(str =="")
+       return "-1";
+       
+       else
+       return str;
+      
+      
+   }
+};
