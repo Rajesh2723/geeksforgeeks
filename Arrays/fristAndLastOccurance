@@ -1,0 +1,33 @@
+
+
+
+Easiest way of solving in O(n)
+
+ 
+
+vector<int> find(int arr[], int n , int x )
+{   
+   int first_occ=-1;
+   int last_occ=-1;
+   vector <int> v;
+   for(int i=0;i<n;i++)
+   { if(arr[i]==x)
+       {     if(first_occ==-1)
+
+              {
+               first_occ=i;
+               last_occ=i;
+
+               }
+           else
+               last_occ=i;
+       }
+       
+   }
+   
+   v.push_back(first_occ);
+   v.push_back(last_occ);
+   
+   return v;
+   
+}
