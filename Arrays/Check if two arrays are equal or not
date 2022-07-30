@@ -24,3 +24,11 @@ bool check(vector<ll> A, vector<ll> B, int N) {
     key 
     value
     internally compare funtion it contains
+    
+    using the sort funtion also we can try with that 
+     sort(A.begin(),A.end());
+      sort(B.begin(),B.end());
+     if(A==B)
+       return true;
+     else
+       return false;
