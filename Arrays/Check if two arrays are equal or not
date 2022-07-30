@@ -1,0 +1,26 @@
+Check if two arrays are equal or not
+
+
+bool check(vector<ll> A, vector<ll> B, int N) {
+        //code here
+        map<int,int> mp1;
+        map<int,int> mp2;
+        
+        for(int i = 0; i<N; i++)
+        {
+            mp1[A[i]]++;
+            mp2[B[i]]++;
+        }
+        
+        if(mp1 == mp2)
+            return 1;
+        else
+            return 0;
+        
+        
+    }
+    //using the ordered map we able to achieve whether the arrays are equal or not
+    since the internal implementation of the map is sorted one which basically contains the 
+    key 
+    value
+    internally compare funtion it contains
