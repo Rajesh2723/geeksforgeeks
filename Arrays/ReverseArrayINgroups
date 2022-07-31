@@ -1,0 +1,8 @@
+int rem,q,i;
+        rem=n%k;
+        q=n/k;
+        
+        for(int i=0;i<q;i++){
+            reverse(arr.begin()+k*i,arr.begin()+k*(i+1));
+        }
+        reverse(arr.begin()+k*q,arr.begin()+k*q+rem);
