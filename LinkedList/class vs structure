@@ -1,0 +1,14 @@
+The C++ class is an extension of the C language structure. Because the only difference between a structure and a class is that structure members have public access by default and class members have private access by default,
+you can use the keywords class or struct to define equivalent classes.
+
+class Node{
+int data;   /// here we can make them private ,public and protected, in c we dont have the classes
+Node*next;
+}
+
+
+struct geeksforgeeks{
+char name[500];
+int id[50];
+float salary   /// here we are make only public by default and its in only
+};
