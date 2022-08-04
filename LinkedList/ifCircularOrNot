@@ -1,0 +1,16 @@
+bool isCircular(Node *head)
+{
+   if(!head){
+       return true;
+   }
+  Node *temp=head;
+  
+  while(temp->next){
+      if(temp->next==head)
+      return true;
+      temp=temp->next;
+  }
+  return false;
+}
+
+//using the head and if the temp->next==head that will point to the first one so it circular we can say
