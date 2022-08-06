@@ -10,7 +10,7 @@ int findMaxLen(string s) {
                 st.pop();
             }
             if(!st.empty()){
-                result=max(result,i-st.top());
+                result=max(result,i-st.top());//here we are making the currentIndex-indexoftop and we are getting the length of the valid substring
             }else{
                 st.push(i);
             }
