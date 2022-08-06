@@ -1,0 +1,13 @@
+void preorder(Node*root,vector<int>&v){   //here we are passing the reference of the vector and we are doing the v.push_back()
+    if(root==NULL)
+    return;
+    v.push_back(root->data);
+    preorder(root->left,v);
+    preorder(root->right,v);
+}
+vector <int> preorder(Node* root)
+{
+  vector<int>v;
+  preorder(root,v);
+  return v;
+}
