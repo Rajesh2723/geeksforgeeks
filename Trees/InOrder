@@ -1,0 +1,13 @@
+void inOrder(Node*root,vector<int>&v){
+        if(root==NULL)
+        return ;
+        inOrder(root->left,v);
+        v.push_back(root->data);
+        inOrder(root->right,v);
+    }
+    vector<int> inOrder(Node* root) {
+        // Your cod
+        vector<int>v;
+        inOrder(root,v);
+        return v;
+    }
