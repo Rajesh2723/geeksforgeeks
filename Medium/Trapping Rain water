@@ -1,0 +1,33 @@
+N = 4
+arr[] = {7,4,0,9}
+Output:
+10
+Explanation:
+Water trapped by above 
+block of height 4 is 3 units and above 
+block of height 0 is 7 units. So, the 
+total unit of water trapped is 10 units.
+
+///
+long long trappingWater(int arr[], int n){
+        long long int sum=0;
+        int left[n];
+        int right[n];
+        int max1=arr[0];
+        for(int i=0;i<n;i++){
+        max1=max(max1,arr[i]);
+        left[i]=max1;
+        }
+        int max2=arr[n-1];
+        for(int j=n-1;j>=1;j--){
+            max2=max(max2,arr[j]);
+            right[j]=max2;
+        }
+        for(int k=0;k<n;k++){
+            long long int water=min(left[k],right[k])-arr[k];
+            if(water>0){
+                sum+=water;
+            }
+        }
+        return sum;
+    }
