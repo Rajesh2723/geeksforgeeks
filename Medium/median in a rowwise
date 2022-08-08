@@ -1,0 +1,11 @@
+int median(vector<vector<int>> &matrix, int r, int c){
+        // code here     
+        vector<int>v;
+        for(int i=0;i<r;i++){
+            for(int j=0;j<c;j++){
+                v.push_back(matrix[i][j]); ///here we are pushing the 2d matrix into a single dimensional vector and we are returning the median from that 
+            }
+        }
+        sort(v.begin(),v.end());
+        return v[v.size()/2];  here we are assuming the elements are odd and we are returning
+    }
