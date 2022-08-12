@@ -1,0 +1,15 @@
+#include<bits/stdc++.h>
+string uniqueChar(string str) {
+	unordered_map<char,int>map;
+    string res="";
+    for(int i=0;i<str.length();i++){
+        map[str[i]]++;
+        if(map[str[i]]>1){
+            continue;
+        }else{
+            res+=str[i];
+        }
+    }
+    return res;
+}
+
