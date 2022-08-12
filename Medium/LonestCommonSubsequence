@@ -1,0 +1,21 @@
+int findLongestConseqSubseq(int arr[], int n)
+    {
+      sort(arr,arr+n);
+      int res=1;
+      int count=1;
+      for(int i=0;i<n;i++){
+        if(arr[i]==arr[i+1]){
+        continue;
+        }
+        if((arr[i+1]-arr[i])==1){
+            count++;
+            if(count>res){
+                res=count;
+            }
+        }else{
+            count=1;
+        }
+        
+      }
+      return res;
+    }
