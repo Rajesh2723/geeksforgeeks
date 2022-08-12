@@ -1,0 +1,10 @@
+vector<int> nextPermutation(int N, vector<int> arr){
+        vector<int>ans;
+        next_permutation(arr.begin(),arr.end());
+        for(auto x:arr){
+            ans.push_back(x);
+        }
+        
+        
+         return ans;
+    }
