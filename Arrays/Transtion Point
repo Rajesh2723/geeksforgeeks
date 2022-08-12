@@ -1,0 +1,15 @@
+int transitionPoint(int arr[], int n) {
+    int res=0;
+    for(int i=0;i<n;i++){
+           if (arr[i]==1){
+               res=i;//make a point
+               break;
+           }
+           else
+               res= -1;
+       }
+       return res;
+}
+
+//here they are just considering the only 0's and the ones 
+so we can take the condtion as arr[i]==1
