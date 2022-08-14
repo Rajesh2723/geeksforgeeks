@@ -1,0 +1,23 @@
+int catchThieves(char arr[], int n, int k) 
+    {
+        vector<int>police,thief;
+        for(int i=0;i<n;i++){
+            if(arr[i]=='P'){
+                police.push_back(i);
+            }else{
+                thief.push_back(i);
+            }
+        }
+        int i=0,j=0,ans=0;
+        while(i<police.size() and j<thief.size()){
+            if(abs(police[i]-thief[j])<=k){
+                ans++,j++,i++;
+            }else if(police[i]>thief[j]){
+                j++;
+            }else{
+                i++;
+            }
+        }
+        return ans;
+    }
+    //Here we are pushing all the indexes inside the vector ans we are taking the absolute diffrence of that if we are getting less than that we are returning value
