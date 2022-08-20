@@ -1,0 +1,33 @@
+N = 12
+S = defRTSersUXI
+Output: deeIRSfrsTUX
+Explanation: Sorted form of given string
+with the same case of character as that
+in original string is deeIRSfrsTUX
+
+
+
+ string caseSort(string str, int n)
+    {
+        string upper;
+        string lower;
+        for(int i=0;i<n;i++){
+            if(isupper(str[i])){
+                upper.push_back(str[i]);
+            }else{
+                lower.push_back(str[i]);
+            }
+        }
+        sort(upper.begin(),upper.end());
+        sort(lower.begin(),lower.end());
+        int j=0,k=0;
+        string res="";
+        for(int i=0;i<n;i++){
+            if(isupper(str[i])){
+                res.push_back(upper[j++]);
+            }else{
+                res.push_back(lower[k++]);
+            }
+        }
+        return res;
+    }
