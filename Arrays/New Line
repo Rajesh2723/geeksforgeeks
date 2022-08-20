@@ -1,0 +1,3 @@
+void printNewLine(){
+    cout<<"Geeks\n"<<"for\n"<<"Geeks";
+}
