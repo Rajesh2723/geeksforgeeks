@@ -1,0 +1,28 @@
+N = 4
+Arr[] = {1, 2, 3, 3}
+Output: YES
+Explanation: Consider i = 3, for [1, 2] 
+sum is 3 and for [3] sum is also 3.
+
+//
+string equilibrium(int *arr, int n) {
+        int fsum=0;
+        int lsum=0;
+        int start=0;
+        int end=n-1;
+        while(start<end){
+            if(fsum<=lsum){
+                fsum+=arr[start++];
+            }else{
+                lsum+=arr[end--];
+            }
+        }
+        if(fsum==lsum){
+            return "YES";
+        }else{
+            return "NO";
+        }
+    }
+    //here for the left sum and the right sum we are just taking the start and end and we are just adding the fsum to it if fsum is equal to the rsum then we are just
+    returning the "YES"
+    
