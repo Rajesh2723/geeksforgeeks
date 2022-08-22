@@ -1,0 +1,14 @@
+
+int anagrams(vector<string>words){
+    unordered_map<string,int>mp;
+    for(int i=0;i<words.size();i++){  here we are using the map to get the element in the order we are
+        mp[words[i]]++;
+    }
+    return mp.size();
+    
+    
+    
+    
+    / groups of the anagrams
+    
+}
