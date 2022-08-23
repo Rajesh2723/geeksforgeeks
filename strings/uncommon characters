@@ -1,0 +1,32 @@
+A = geeksforgeeks
+B = geeksquiz
+Output: fioqruz
+Explanation: 
+The characters 'f', 'i', 'o', 'q', 'r', 'u','z' 
+are either present in A or B, but not in both.
+
+//
+
+string UncommonChars(string A, string B)
+        {
+            string ans="";
+            set<char>s1(A.begin(),A.end());
+            set<char>s2(B.begin(),B.end());
+            map<char,int>map;
+            for(auto i:s1){
+                map[i]++;
+            }
+            for(auto i:s2){
+                map[i]++;
+            }
+            for(auto i:map){                  //here we are just checking the value is one of the perticular one so we are accessing the i.second and we are returning the 
+                                                          value
+                if(i.second==1){
+                    ans=ans+i.first;
+                }
+            }
+            if(ans=="")
+            return "-1";
+            else
+            return ans;
+        }
