@@ -1,0 +1,23 @@
+str = geeksforgeeks
+patt = set
+Output: 1
+Explanation: e is the character which is
+present in given str "geeksforgeeks"
+and is also presen in patt "set". Minimum
+index of e is 1. 
+
+
+////
+ int minIndexChar(string str, string patt)
+    {
+        int len=patt.length();
+        unordered_set<char>s;              //settting the elements in the set
+        for(int i=0;i<len;i++){
+            s.insert(patt[i]);
+        }
+        for(int i=0;i<str.length();i++){
+            if(s.find(str[i])!=s.end())         //here we are fiding the element whether if it can be find and we are returning the ith index 
+            return i;
+        }
+        return -1;
+    }
