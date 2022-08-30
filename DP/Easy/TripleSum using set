@@ -1,0 +1,16 @@
+bool find3Numbers(int A[], int n, int X)
+    {
+       
+        for(int i=0;i<n;i++){
+            int newTarget=X-A[i];
+            unordered_set<int> set;
+            for(int j=i+1;j<n;j++){
+                if(set.find(newTarget-A[j])!=set.end()){
+                    return true;
+                }else{
+                    set.insert(A[j]);
+                }
+            }
+        }
+        return false;
+    }
