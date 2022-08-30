@@ -1,0 +1,27 @@
+Input  : 
+arr[] = {3, 5, 10, 15, 17, 12, 9}
+K = 4
+Output : 
+62
+Explanation :
+Then disjoint pairs with difference less
+than K are, (3, 5), (10, 12), (15, 17)
+max sum which we can get is 
+3 + 5 + 10 + 12 + 15 + 17 = 62
+Note that an alternate way to form 
+disjoint pairs is,(3, 5), (9, 12), (15, 17)
+but this pairing produces less sum.
+
+
+int maxSumPairWithDifferenceLessThanK(int arr[], int N, int K)
+    {
+        sort(arr,arr+N);
+        int sum=0;
+        for(int i=N-1;i>0;i--){
+            if(abs(arr[i]-arr[i-1])<K){
+                sum+=arr[i]+arr[i-1];
+                i--;
+            }
+        }
+        return sum;
+    }
