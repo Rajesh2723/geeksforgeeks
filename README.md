@@ -1,1 +1,1 @@
-# These are the codes which i solved in geeksforgeeks
+# These are the codes which is solved in geeksforgeeks
