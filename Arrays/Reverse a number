@@ -1,0 +1,14 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int n,rev=0,remender;
+    cin>>n;
+    while(n!=0){
+        remender=n%10;
+        rev=rev*10+remender;
+        n/=10;
+    }
+    cout<< " reverse of a number " << rev <<endl;
+}
